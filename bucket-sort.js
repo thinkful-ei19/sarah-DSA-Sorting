@@ -10,17 +10,17 @@
 //   Push values to correct buckets 
 //   Sort buckets
 
-//below does not account for duplicates
+//below sort function does not account for duplicates
 function bSort(arr, min, max) {
-  //get count of number of buckets, this allows you to get n
+  //get count of number of n # ofbuckets
   let bCount = max - min +1;
   console.log(bCount);
-  //create bcount number of new arrays
+  //create bcount size empty new array
   let bArray = new Array(bCount);
   console.log(bArray);
   //create empty array to push results into
   let sortedArray = [];
-  //loop through array
+  //loop through array and push into buckets array
   for(let i = 0; i<arr.length; i++) {
     // if (bArray[arr[i] - min] == null) {
       bArray[arr[i]-min] = arr[i];
@@ -37,6 +37,7 @@ function bSort(arr, min, max) {
     }
   }
   console.log(sortedArray);
+  return sortedArray;
 }
 
 

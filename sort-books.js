@@ -56,7 +56,7 @@ function swap(array, i, j) {
 console.log(quickSort(library));
 console.log('qsort', qCount);
 
-//sort using JS .sort method
+//sort using JS .sort method probably more efficient
 function sort(library) {
   return library.sort((book1, book2) => 
     book1.title > book2.title);
