@@ -3,9 +3,11 @@
 // Sort in place
 // Write an algorithm to shuffle an array into a random order in-place (i.e. without creating a new array).
 
+//This is known as Fisher-Yates (aka Knuth) Shuffle
+
 function shuffle(arr) {
   let currIndex = arr.length, tempValue, randomIndex;
-
+  // console.log(tempValue, currIndex, randomIndex);
   //while elements remain that have not yet been shuffled
   while (currIndex !== 0) {
     //pick element to shuffle
@@ -16,7 +18,7 @@ function shuffle(arr) {
     tempValue = arr[currIndex];
     arr[currIndex] = arr[randomIndex];
     arr[randomIndex] = tempValue;
-    console.log(tempValue, currIndex, randomIndex);
+    // console.log(tempValue, currIndex, randomIndex);
   }
   return arr;
 }
